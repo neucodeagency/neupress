@@ -1,0 +1,62 @@
+$font-sizes: (
+ -1: 0.750rem,
+  0: 1.000rem,
+  1: 1.333rem,
+  2: 1.777rem,
+  3: 2.369rem,
+  4: 3.157rem,
+);
+
+$line-heights: (
+ -1: 1.0rem,
+  0: 1.0rem,
+  1: 2.0rem,
+  2: 2.0rem,
+  3: 3.0rem,
+  4: 4.0rem,
+);
+
+@function font-size($level) {
+  @return map-get($font-sizes, $level);
+}
+
+@function line-height($level) {
+  @return map-get($line-heights, $level);
+}
+
+@mixin typography($level) {
+  font-size: font-size($level);
+  line-height: line-height($level);
+}
+
+@mixin typography-xs() {
+  @include typography(-1);
+}
+
+@mixin typography-sm() {
+  @include typography(0);
+  @media screen and (max-width: $max-sm) {
+    @include typography(0);
+  }
+}
+
+@mixin typography-md() {
+  @include typography(1);
+  @media screen and (max-width: $max-sm) {
+    @include typography(0);
+  }
+}
+
+@mixin typography-lg() {
+  @include typography(2);
+  @media screen and (max-width: $max-sm) {
+    @include typography(1);
+  }
+}
+
+@mixin typography-xl() {
+  @include typography(3);
+  @media screen and (max-width: $max-sm) {
+    @include typography(2);
+  }
+}

@@ -1,0 +1,11 @@
+$button-padding-horizontal: 1.5rem;
+$button-padding-vertical: 1.0rem;
+
+.button {
+  @include typography(0);
+
+  box-sizing: border-box;
+  padding: $button-padding-vertical $button-padding-horizontal;
+  background-color: $primary-bg-color;
+  cursor: pointer;
+}

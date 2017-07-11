@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@mixin sans-n300() {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+@mixin sans-n400() {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+@mixin sans-n700() {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
